@@ -7,13 +7,13 @@
   <meta name="description" content="CCTDD ENTERPRISE LIMITED provides business support and technology services that make it easier for companies to receive payments from their international clients." />
   <style>
     :root {
-      --brand: #1d4ed8;       /* Primary brand blue */
-      --brand-600: #1e40af;   /* Darker */
-      --accent: #ffffff;      /* White accent */
-      --bg: #f8fafc;          /* Light background */
-      --card: #ffffff;        /* Card background */
-      --muted: #475569;       /* Muted text */
-      --text: #0f172a;        /* Main text */
+      --brand: #1d4ed8;
+      --brand-600: #1e40af;
+      --accent: #ffffff;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --muted: #475569;
+      --text: #0f172a;
       --ring: rgba(29, 78, 216, 0.4);
       --radius: 16px;
       --shadow: 0 10px 30px rgba(0,0,0,0.12);
@@ -30,7 +30,6 @@
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
 
-    /* Layout helpers */
     .container { width: min(1100px, 92%); margin-inline: auto; }
     .grid { display: grid; gap: 1.25rem; }
     .btn {
@@ -56,10 +55,10 @@
     .nav-cta { display: none; gap: .7rem; }
     .hamburger { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 10px; border: 1px solid #e2e8f0; background: #f1f5f9; }
 
-    /* Hero */
     .hero { padding: 5.5rem 0 4rem; text-align: center; background: linear-gradient(180deg, #ffffff, #e0f2fe); }
-    .eyebrow { display: inline-block; padding: .35rem .7rem; border-radius: 999px; background: #dbeafe; color: var(--brand); font-weight: 700; letter-spacing: .3px; font-size: .8rem; }
     .hero h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; margin: 1rem 0 .8rem; color: var(--brand-600); }
+    .hero h2.company-name { font-size: clamp(2.5rem, 7vw, 4rem); font-weight: 900; color: var(--brand); margin: 0 0 1rem; }
+    .eyebrow { display: inline-block; padding: .35rem .7rem; border-radius: 999px; background: #dbeafe; color: var(--brand); font-weight: 700; letter-spacing: .3px; font-size: .8rem; }
     .hero p { font-size: clamp(1rem, 2.4vw, 1.2rem); color: var(--muted); margin: 0 auto 1.6rem; max-width: 60ch; }
     .hero .cta { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-top: 1rem; }
 
@@ -86,11 +85,10 @@
       <div class="nav-links" role="navigation" aria-label="Primary">
         <a href="#features">Features</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="support.html">Contact</a>
       </div>
       <div class="nav-cta">
-        <a class="btn ghost" href="#contact">Log in</a>
-        <a class="btn" href="#contact">Get started</a>
+        <a class="btn" href="support.html">Get started</a>
       </div>
       <button class="hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
     </nav>
@@ -100,11 +98,12 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container">
+        <h2 class="company-name">CCTDD ENTERPRISE LIMITED</h2>
         <span class="eyebrow">Trusted business support</span>
         <h1>Making international payments simple and secure.</h1>
         <p>We provide business support and technology services that make it easier for companies to receive payments from their international clients. We use regulated payment providers and do not handle client funds directly.</p>
         <div class="cta">
-          <a class="btn" href="#contact">Get started</a>
+          <a class="btn" href="support.html">Get started</a>
           <a class="btn ghost" href="#about">Learn more</a>
         </div>
       </div>
@@ -130,34 +129,6 @@
         <li>Technology services built for security and compliance</li>
       </ul>
     </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="container">
-      <div class="section-title">
-        <h2>Contact Us</h2>
-        <p class="muted">Have questions? Reach out and our team will get back to you promptly.</p>
-      </div>
-      <form id="contactForm" aria-label="Contact form">
-        <div class="grid" style="grid-template-columns: 1fr 1fr;">
-          <div>
-            <label for="name" class="muted">Name</label>
-            <input id="name" name="name" placeholder="Your Name" required />
-          </div>
-          <div>
-            <label for="email" class="muted">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
-          </div>
-        </div>
-        <div>
-          <label for="message" class="muted">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
-        </div>
-        <div class="cta">
-          <button type="submit" class="btn">Send message</button>
-          <span class="muted" id="formStatus" role="status" aria-live="polite"></span>
-        </div>
-      </form>
-    </section>
   </main>
 
   <footer>
@@ -167,13 +138,7 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const form = document.getElementById('contactForm');
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const status = document.getElementById('formStatus');
-      status.textContent = 'Thanks! We\'ll be in touch shortly.';
-      form.reset();
-    });
   </script>
 </body>
 </html>
+
