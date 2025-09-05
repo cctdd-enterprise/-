@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CCTDD ENTERPRISE LIMITED — Business Support & Technology Services</title>
+  <meta name="description" content="CCTDD ENTERPRISE LIMITED provides business support and technology services that make it easier for companies to receive payments from their international clients." />
+  <style>
+    :root {
+      --brand: #1d4ed8;       /* Primary brand blue */
+      --brand-600: #1e40af;   /* Darker */
+      --accent: #ffffff;      /* White accent */
+      --bg: #f8fafc;          /* Light background */
+      --card: #ffffff;        /* Card background */
+      --muted: #475569;       /* Muted text */
+      --text: #0f172a;        /* Main text */
+      --ring: rgba(29, 78, 216, 0.4);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* Layout helpers */
+    .container { width: min(1100px, 92%); margin-inline: auto; }
+    .grid { display: grid; gap: 1.25rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .9rem 1.1rem; border-radius: 999px; border: 1px solid transparent;
+      background: var(--brand); color: white; font-weight: 600; letter-spacing: .2px;
+      box-shadow: var(--shadow); transition: transform .06s ease, background .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); background: var(--brand-600); box-shadow: 0 14px 34px rgba(29,78,216,.35); }
+    .btn.ghost { background: transparent; color: var(--brand); border-color: var(--brand); box-shadow: none; }
+    .btn.ghost:hover { background: rgba(29,78,216,.05); }
+
+    header {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px);
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
+    .brand { display: flex; align-items: center; gap: .6rem; font-weight: 800; letter-spacing: .3px; color: var(--brand); }
+    .brand img { width: 120px; height: auto; }
+    .nav a { opacity: .9; }
+    .nav-links { display: none; gap: 1.2rem; align-items: center; }
+    .nav-cta { display: none; gap: .7rem; }
+    .hamburger { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 10px; border: 1px solid #e2e8f0; background: #f1f5f9; }
+
+    /* Hero */
+    .hero { padding: 5.5rem 0 4rem; text-align: center; background: linear-gradient(180deg, #ffffff, #e0f2fe); }
+    .eyebrow { display: inline-block; padding: .35rem .7rem; border-radius: 999px; background: #dbeafe; color: var(--brand); font-weight: 700; letter-spacing: .3px; font-size: .8rem; }
+    .hero h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; margin: 1rem 0 .8rem; color: var(--brand-600); }
+    .hero p { font-size: clamp(1rem, 2.4vw, 1.2rem); color: var(--muted); margin: 0 auto 1.6rem; max-width: 60ch; }
+    .hero .cta { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-top: 1rem; }
+
+    section { padding: 3.8rem 0; }
+    .section-title { text-align: center; margin-bottom: 2rem; }
+    .muted { color: var(--muted); }
+
+    footer { padding: 2.2rem 0; border-top: 1px solid #e2e8f0; color: var(--muted); text-align:center; }
+    footer img { width: 100px; height: auto; margin-bottom: 1rem; }
+
+    @media (min-width: 768px) {
+      .nav-links { display: flex; }
+      .nav-cta { display: flex; }
+      .hamburger { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <img src="logo.png" alt="CCTDD ENTERPRISE LIMITED Logo" />
+      </a>
+      <div class="nav-links" role="navigation" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn ghost" href="#contact">Log in</a>
+        <a class="btn" href="#contact">Get started</a>
+      </div>
+      <button class="hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Trusted business support</span>
+        <h1>Making international payments simple and secure.</h1>
+        <p>We provide business support and technology services that make it easier for companies to receive payments from their international clients. We use regulated payment providers and do not handle client funds directly.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Get started</a>
+          <a class="btn ghost" href="#about">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container">
+      <div class="section-title">
+        <h2>About Us</h2>
+        <p class="muted">At CCTDD ENTERPRISE LIMITED, we focus on helping businesses succeed globally by simplifying cross-border transactions.</p>
+      </div>
+      <p>Our team partners with regulated payment providers to ensure every transaction is secure and compliant, while giving businesses the tools they need to scale internationally without unnecessary friction. We never handle client funds directly, ensuring transparency and trust.</p>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="container">
+      <div class="section-title">
+        <h2>Our Services</h2>
+      </div>
+      <ul>
+        <li>Seamless integration with regulated payment providers</li>
+        <li>Business support tailored for global expansion</li>
+        <li>Technology services built for security and compliance</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p class="muted">Have questions? Reach out and our team will get back to you promptly.</p>
+      </div>
+      <form id="contactForm" aria-label="Contact form">
+        <div class="grid" style="grid-template-columns: 1fr 1fr;">
+          <div>
+            <label for="name" class="muted">Name</label>
+            <input id="name" name="name" placeholder="Your Name" required />
+          </div>
+          <div>
+            <label for="email" class="muted">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+        <div>
+          <label for="message" class="muted">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+        </div>
+        <div class="cta">
+          <button type="submit" class="btn">Send message</button>
+          <span class="muted" id="formStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <img src="logo.png" alt="CCTDD ENTERPRISE LIMITED Logo" />
+    <p>© <span id="year"></span> CCTDD ENTERPRISE LIMITED. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form = document.getElementById('contactForm');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const status = document.getElementById('formStatus');
+      status.textContent = 'Thanks! We\'ll be in touch shortly.';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
